@@ -1,0 +1,9 @@
+#sidebar-brand {
+  color: white;
+}
+
+#sidebar-brand h1 {
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
