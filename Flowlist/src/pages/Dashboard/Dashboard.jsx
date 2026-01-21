@@ -17,6 +17,9 @@ export default function Dashboard() {
               2 meetings to attend, 5 event to participate 
               in, and you have receive 28 message from 5 different people
             </p>
+            <div id="task-completed-container">
+              
+            </div>
           </div>
         </main>
       </div>
