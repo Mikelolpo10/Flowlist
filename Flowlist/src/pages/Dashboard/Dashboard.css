@@ -1,0 +1,11 @@
+#greetings-container {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+  width: 10rem;
+  background: red;
+}
+
+#greeting-container h1 {
+  color: white;
+}
