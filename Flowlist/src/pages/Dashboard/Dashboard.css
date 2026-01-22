@@ -18,6 +18,44 @@
 }
 
 #greetings-container p {
-  font-size: 0.8rem;
+  font-size: 13px;
   font-weight: 600;
+}
+
+#task-completed-container {
+  display: flex;
+  padding-top: 0.5rem;
+}
+
+#task-completed-container img {
+  padding-left: 0.2rem;
+  width: 3.2rem;
+}
+
+#task-completed-details {
+  padding-left: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#task-completed-details h5 {
+  color: #585858;
+  font-size: 0.8rem;
+}
+
+#task-completed-details p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#view-schedule-btn {
+  margin-top: 1rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 0.8em;
+  background-color: #445AF7;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 700; 
 }
