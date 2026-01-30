@@ -1,11 +1,11 @@
 import { NavLink } from 'react-router'
-import logoBrand from '@assets/logo/logo-brand.png'
-import logoDashboard from '@assets/logo/logo-dashboard.png'
-import logoSchedule from '@assets/logo/logo-schedule.png'
-import logoTeams from '@assets/logo/logo-teams.png'
-import logoConnect from '@assets/logo/logo-connect.png'
-import logoSettings from '@assets/logo/logo-settings.png'
-import logoChat from '@assets/logo/logo-chat.png'
+import logoBrand from '@assets/logo/sidebar/logo-brand.png'
+import logoDashboard from '@assets/logo/sidebar/logo-dashboard.png'
+import logoSchedule from '@assets/logo/sidebar/logo-schedule.png'
+import logoTeams from '@assets/logo/sidebar/logo-teams.png'
+import logoConnect from '@assets/logo/sidebar/logo-connect.png'
+import logoSettings from '@assets/logo/sidebar/logo-settings.png'
+import logoChat from '@assets/logo/sidebar/logo-chat.png'
 import './Sidebar.css'
 
 export default function Sidebar() {

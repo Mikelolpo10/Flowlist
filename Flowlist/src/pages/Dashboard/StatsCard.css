@@ -1,0 +1,37 @@
+.stats-card {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  border-radius: 1rem;
+  color: white;
+  aspect-ratio: 1 / 0.7;
+}
+
+.stats-details {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stats-details h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.stats-details p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.stats-logo {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.stats-logo img {
+  width: 2rem;
+  height: 2rem;
+}
