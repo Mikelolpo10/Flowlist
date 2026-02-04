@@ -1,0 +1,26 @@
+.upcoming-container {
+  padding: 1rem;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  height: fit-content;
+  border-radius: 1rem;
+  background: white;
+}
+
+.upcoming-container-head {
+  padding-top: 0.5rem;
+  padding: 0 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.upcoming-container-head a {
+  margin-left: auto;
+  color: #5B69E0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}

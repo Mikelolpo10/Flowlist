@@ -1,7 +1,8 @@
 #sidebar-container {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   width: 18%;
-  min-width: 200px;
   background: #5F5BD1;
   background: linear-gradient(313deg, rgba(95, 91, 209, 1) 0%, rgba(82, 134, 255, 1) 100%);
 }
@@ -11,17 +12,24 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  color: white;
   transform: translateX(-5%)
 }
 
-#sidebar-brand img {
-  height: 1.7rem;
-  width: 1.7rem;
+#brand-link {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  text-decoration: none;
 }
 
-#sidebar-brand h1 {
+#brand-logo {
+  height: 1.7rem;
+  width: 1.7rem;
+  transform: translateY(20%)
+}
+
+#brand-name {
+  color: white;
   font-size: 1.5rem;
   text-decoration: underline;
   text-underline-offset: 5px;
@@ -30,7 +38,6 @@
 #sidebar-nav {
   display: flex;
   flex-direction: column;
-  /* background-color: red; */
 }
 
 .nav-option-container {
@@ -62,6 +69,10 @@
   background: linear-gradient(to right, white, transparent);
 }
 
+.nav-option-active {
+  background-color: #00A6FF;
+}
+
 .nav-option-container img {
   height: 1rem;
   width: 1rem;
@@ -73,4 +84,42 @@
   font-weight: 600;
 }
 
+#sidebar-profile-container {
+  position: relative;
+  margin-top: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+}
 
+#sidebar-profile-container::before {
+  content: "";
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%);
+  position: absolute;
+  width: 85%;
+  height: 1px;
+  background-color: white;
+}
+
+#profile-button {
+  padding-right: 0.5rem;
+  width: 3rem;
+}
+
+#username {
+  color: white;
+  font-weight: 600;
+}
+
+#notification-bell {
+  margin-left: auto;
+  width: 1.5rem;
+}
+
+@media (max-width: 568px) {
+  #sidebar-container {
+    display: none;
+  }
+}

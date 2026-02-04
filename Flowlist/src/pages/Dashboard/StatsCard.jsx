@@ -3,6 +3,10 @@ import './StatsCard.css'
 export default function StatsCard({ bgColor, logo, count, label }) {
   return(
     <div className="stats-card" style={{backgroundColor: `${bgColor}`}}>
+      <a href="#"></a>
+      <div className="stats-view-details">
+        View details
+      </div>
       <div className="stats-logo">
         <img src={logo} />
       </div>
@@ -13,3 +17,5 @@ export default function StatsCard({ bgColor, logo, count, label }) {
     </div>
   )
 }
+
+//Saturation untuk card terakhir kyk g berubah gitu
