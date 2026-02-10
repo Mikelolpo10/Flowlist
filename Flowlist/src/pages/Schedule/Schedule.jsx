@@ -1,5 +1,4 @@
 import { motion } from 'motion/react'
-import Sidebar from '../../components/Sidebar'
 import './Schedule.css'
 
 export default function Schedule({ pageVariant }) {
@@ -8,8 +7,6 @@ export default function Schedule({ pageVariant }) {
       <title>Schedule</title>
 
       <div className='root-container'>
-        <Sidebar />
-
         <main
           id='schedule-container'
           variants={pageVariant}

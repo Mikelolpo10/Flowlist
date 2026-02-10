@@ -4,7 +4,6 @@ import logoMeetings from '@assets/logo/logo-meetings.png'
 import logoEvents from '@assets/logo/logo-events.png'
 import logoTaskDone from '@assets/logo/logo-task-done.png'
 import logoTaskPending from '@assets/logo/logo-task-pending.png'
-import Sidebar from '../../components/Sidebar.jsx'
 import StatsCard from './StatsCard.jsx'
 import UpcomingCard from '../../components/UpcomingCard.jsx'
 import './Dashboard.css'
@@ -45,8 +44,6 @@ export default function Dashboard({pageVariant}) {
       <title>Dashboard</title>
 
       <div className="root-container">
-        <Sidebar />
-
         <motion.main 
           id="dashboard-container"
           variants={pageVariant}

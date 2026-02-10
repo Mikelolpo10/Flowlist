@@ -1,5 +1,4 @@
 import { motion } from 'motion/react'
-import Sidebar from '@components/Sidebar.jsx'
 import Button from '@components/Button.jsx'
 import FeatureCard from './FeatureCard.jsx'
 import logoPattern1 from '@assets/misc/logo-pattern-1.png'
@@ -25,8 +24,6 @@ export default function Homepage({pageVariant}) {
       <title>Homepage</title>
 
       <div className="root-container">
-        <Sidebar />
-
         <motion.main 
           id="homepage-container"
           variants={pageVariant}
