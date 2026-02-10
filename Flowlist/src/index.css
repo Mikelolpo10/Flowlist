@@ -3,6 +3,8 @@
 
   background: #EEFDFF;
 
+  overflow-x: hidden;
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

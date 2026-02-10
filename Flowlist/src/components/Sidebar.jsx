@@ -51,7 +51,11 @@ export default function Sidebar() {
         </div>
         <nav id="sidebar-nav">
           {menus.map(({ to, icon, label }) => (
-            <NavLink key={label} to={to} className={`nav-option-container ${({ isActive }) => (isActive ? "nav-option-active" : "")}`}>
+            <NavLink 
+              key={label} 
+              to={to} 
+              className={({isActive}) => `nav-option-container ${isActive ? 'nav-option-active' : ''}`}
+            >
               <img src={icon} alt={label} />
               <h3>{label}</h3>
             </NavLink>

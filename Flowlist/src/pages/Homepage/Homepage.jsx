@@ -10,7 +10,7 @@ import logoPattern5 from '@assets/misc/logo-pattern-5.png'
 import logoPattern6 from '@assets/misc/logo-pattern-6.png'
 import './Homepage.css'
 
-export default function Homepage() {
+export default function Homepage({pageVariant}) {
   const logoPatterns = [
     logoPattern1,
     logoPattern2,
@@ -24,9 +24,17 @@ export default function Homepage() {
     <>
       <title>Homepage</title>
 
-      <div id="root-container">
+      <div className="root-container">
         <Sidebar />
-        <main id="homepage-container">
+
+        <motion.main 
+          id="homepage-container"
+          variants={pageVariant}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+          transition={{ duration: 0.3 }}
+        >
           <div id="primary-top-container">
             <h1>A better way to organize your schedule<br /> powered by Flowlists</h1>
             <p>Plan smarter. Stay organized. Schedule everything</p>
@@ -67,7 +75,7 @@ export default function Homepage() {
               }}
             />
           ))}
-        </main>
+        </motion.main>
       </div>
     </>
   )

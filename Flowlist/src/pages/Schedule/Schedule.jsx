@@ -1,17 +1,25 @@
+import { motion } from 'motion/react'
 import Sidebar from '../../components/Sidebar'
 import './Schedule.css'
 
-export default function Schedule() {
+export default function Schedule({ pageVariant }) {
   return (
     <>
       <title>Schedule</title>
 
-      <div id='root-container'>
+      <div className='root-container'>
         <Sidebar />
 
-        <main>
+        <main
+          id='schedule-container'
+          variants={pageVariant}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+          transition={{ duration: 0.3 }}
+        >
           <div id="schedule">
-            
+
           </div>
         </main>
       </div>

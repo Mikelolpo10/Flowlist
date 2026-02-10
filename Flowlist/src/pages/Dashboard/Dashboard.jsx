@@ -1,3 +1,5 @@
+import { motion } from 'motion/react'
+import { useState, useEffect } from 'react'
 import logoMeetings from '@assets/logo/logo-meetings.png'
 import logoEvents from '@assets/logo/logo-events.png'
 import logoTaskDone from '@assets/logo/logo-task-done.png'
@@ -5,10 +7,9 @@ import logoTaskPending from '@assets/logo/logo-task-pending.png'
 import Sidebar from '../../components/Sidebar.jsx'
 import StatsCard from './StatsCard.jsx'
 import UpcomingCard from '../../components/UpcomingCard.jsx'
-import { useState, useEffect } from 'react'
 import './Dashboard.css'
 
-export default function Dashboard() {
+export default function Dashboard({pageVariant}) {
   const [ eventList, setEventList ] = useState()
   const [ meetingList, setMeetingList ] = useState()
 
@@ -43,10 +44,17 @@ export default function Dashboard() {
     <>
       <title>Dashboard</title>
 
-      <div id="root-container">
+      <div className="root-container">
         <Sidebar />
 
-        <main id="dashboard-container">
+        <motion.main 
+          id="dashboard-container"
+          variants={pageVariant}
+          initial='initial'
+          animate='animate'
+          exit='exit'
+          transition={{ duration: 0.3 }}  
+        >
           <div id="main-top-container">
             <section id="greetings-container">
               <h2>Hello, Username.</h2>
@@ -128,7 +136,7 @@ export default function Dashboard() {
               data={meetingList}
             />
           </div>  
-        </main>
+        </motion.main>
       </div>
     </>
   )
