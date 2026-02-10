@@ -1,4 +1,5 @@
 import { motion } from 'motion/react'
+import { Link } from 'react-router'
 import { useState, useEffect } from 'react'
 import logoMeetings from '@assets/logo/logo-meetings.png'
 import logoEvents from '@assets/logo/logo-events.png'
@@ -67,7 +68,7 @@ export default function Dashboard({ pageVariant, userData }) {
                   <p>Keep Going!</p>
                 </div>
               </div>
-              <button id="view-schedule-btn">View Schedule</button>
+              <Link id="view-schedule-btn" to='/schedule'>View Schedule</Link>
             </section>
             <section id="stats-container">
               <select id="stats-dropdown-time">
@@ -76,7 +77,7 @@ export default function Dashboard({ pageVariant, userData }) {
                 <option value="30 days">30 Days</option>
                 <option value="alltime">All time</option>
               </select>
-              <div id="stats-card-container"> {/*bagus pake file lain buat urus data card */}
+              <div id="stats-card-container"> {/*mungkin better pake file lain buat urus data card */}
                 <StatsCard
                   bgColor="#FF6F6F"
                   logo={logoMeetings}
@@ -125,7 +126,7 @@ export default function Dashboard({ pageVariant, userData }) {
                   <p>Keep Going!</p>
                 </div>
               </div>
-              <button id="view-schedule-btn">View Schedule</button>
+              <Link id="view-schedule-btn" to='/schedule'>View Schedule</Link>
             </section>
             <UpcomingCard
               header="Meetings"

@@ -11,7 +11,6 @@ import logoNotification from '@assets/logo/sidebar/logo-notification.png'
 import './Sidebar.css'
 
 export default function Sidebar({ userData }) {
-  console.log(userData)
   const menus = [
     { to: '/dashboard', icon: logoDashboard, label: 'Dashboard' },
     { to: '/schedule', icon: logoSchedule, label: 'Schedule' },

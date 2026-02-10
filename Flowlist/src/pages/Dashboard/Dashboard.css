@@ -76,12 +76,16 @@
 #view-schedule-btn {
   margin-top: 1rem;
   padding: 0.8rem;
+  display: flex;
+  justify-content: center;
   border: none;
   border-radius: 0.8em;
   background-color: #445AF7;
   color: white;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
   font-weight: 700; 
+  text-decoration: none;
   cursor: pointer;
 }
 
