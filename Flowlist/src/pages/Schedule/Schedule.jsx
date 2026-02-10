@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
 import './Schedule.css'
 
-export default function Schedule({ pageVariant }) {
+export default function Schedule({ pageVariant, userData }) {
   return (
     <>
       <title>Schedule</title>

@@ -8,25 +8,25 @@ import StatsCard from './StatsCard.jsx'
 import UpcomingCard from '../../components/UpcomingCard.jsx'
 import './Dashboard.css'
 
-export default function Dashboard({pageVariant}) {
-  const [ eventList, setEventList ] = useState()
-  const [ meetingList, setMeetingList ] = useState()
+export default function Dashboard({ pageVariant, userData }) {
+  const [eventList, setEventList] = useState()
+  const [meetingList, setMeetingList] = useState()
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const res = await fetch("/data/event-list.json")
-        const data = await res.json() 
+        const data = await res.json()
         setEventList(data)
-      } catch(err) {
+      } catch (err) {
         console.log(err)
       }
 
       try {
         const res = await fetch("/data/meeting-list.json")
-        const data = await res.json() 
+        const data = await res.json()
         setMeetingList(data)
-      } catch(err) {
+      } catch (err) {
         console.log(err)
       }
     }
@@ -35,7 +35,7 @@ export default function Dashboard({pageVariant}) {
 
   }, [])
 
-  if(!eventList || !meetingList) {
+  if (!eventList || !meetingList) {
     return <p>Loading Data</p>
   }
 
@@ -44,13 +44,13 @@ export default function Dashboard({pageVariant}) {
       <title>Dashboard</title>
 
       <div className="root-container">
-        <motion.main 
+        <motion.main
           id="dashboard-container"
           variants={pageVariant}
           initial='initial'
           animate='animate'
           exit='exit'
-          transition={{ duration: 0.3 }}  
+          transition={{ duration: 0.3 }}
         >
           <div id="main-top-container">
             <section id="greetings-container">
@@ -132,7 +132,7 @@ export default function Dashboard({pageVariant}) {
               link="#"
               data={meetingList}
             />
-          </div>  
+          </div>
         </motion.main>
       </div>
     </>

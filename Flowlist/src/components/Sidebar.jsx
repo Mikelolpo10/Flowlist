@@ -1,5 +1,4 @@
 import { NavLink, Link } from 'react-router'
-import { useState, useEffect } from 'react'
 import logoBrand from '@assets/logo/sidebar/logo-brand.png'
 import logoDashboard from '@assets/logo/sidebar/logo-dashboard.png'
 import logoSchedule from '@assets/logo/sidebar/logo-schedule.png'
@@ -11,8 +10,8 @@ import logoProfile from '@assets/logo/sidebar/logo-profile.png'
 import logoNotification from '@assets/logo/sidebar/logo-notification.png'
 import './Sidebar.css'
 
-export default function Sidebar() {
-  const [ userData, setUserData ] = useState()
+export default function Sidebar({ userData }) {
+  console.log(userData)
   const menus = [
     { to: '/dashboard', icon: logoDashboard, label: 'Dashboard' },
     { to: '/schedule', icon: logoSchedule, label: 'Schedule' },
@@ -21,24 +20,6 @@ export default function Sidebar() {
     { to: '/settings', icon: logoSettings, label: 'Settings' },
     { to: '/chat', icon: logoChat, label: 'Chat' },
   ]
-
-  useEffect(() => {
-    const fetchUserData = async() => {
-      try {
-        const res = await fetch("/data/user-data.json")
-        const data = await res.json()
-        setUserData(data)
-      } catch(err) {
-        console.log(err)
-      }
-    }
-
-    fetchUserData()
-  }, [])
-
-  if(!userData) {
-    return <p>Loading user data</p> //Nanti  pake component khusus  buat nampilin loading fetchnya
-  }
 
   return (
     <>
@@ -51,10 +32,10 @@ export default function Sidebar() {
         </div>
         <nav id="sidebar-nav">
           {menus.map(({ to, icon, label }) => (
-            <NavLink 
-              key={label} 
-              to={to} 
-              className={({isActive}) => `nav-option-container ${isActive ? 'nav-option-active' : ''}`}
+            <NavLink
+              key={label}
+              to={to}
+              className={({ isActive }) => `nav-option-container ${isActive ? 'nav-option-active' : ''}`}
             >
               <img src={icon} alt={label} />
               <h3>{label}</h3>
@@ -62,9 +43,9 @@ export default function Sidebar() {
           ))}
         </nav>
         <div id="sidebar-profile-container">
-          <img id="profile-button" src={logoProfile} alt="Profile picture"/>
+          <img id="profile-button" src={logoProfile} alt="Profile picture" />
           <span id="username">{userData.username}</span>
-          <img id="notification-bell" src={logoNotification} alt="Notification bell"/>
+          <img id="notification-bell" src={logoNotification} alt="Notification bell" />
         </div>
       </aside>
     </>
