@@ -1,6 +1,7 @@
 import { Routes, Route } from 'react-router'
-import Dashboard from './pages/Dashboard/Dashboard.jsx'
 import Homepage from './pages/Homepage/Homepage.jsx'
+import Dashboard from './pages/Dashboard/Dashboard.jsx'
+import Schedule from './pages/Schedule/Schedule.jsx'
 import './App.css'
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
         <Route
           path="/dashboard"
           element={<Dashboard />}
+        />
+        <Route
+          path='/schedule'
+          element={<Schedule />}
         />
       </Routes>
     </>

@@ -4,10 +4,10 @@
   flex-direction: column;
   align-items: center;
   border-radius: 1rem;
-  background-color: green;
 }
 
 .feature-card p {
+  margin-bottom: 1.5rem;
   text-align: center;
   color: #686868;
   font-weight: 600;

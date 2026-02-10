@@ -1,5 +1,6 @@
 #homepage-container {
   padding: 2rem 2rem 0 2rem;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -7,18 +8,19 @@
   width: 100%;
 }
 
-#primary-container {
+#primary-top-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
 }
 
-#primary-container h1 {
+#primary-top-container h1 {
   text-align: center;
   font-size: 2.5rem;
 }
 
-#primary-container p {
+#primary-top-container p {
   text-align: center; 
   color: #686868;
   font-weight: 600;
@@ -36,9 +38,59 @@
 }
 
 #feature-container {
+  margin-top: 1rem;
   display: grid;
   grid-template-columns: 3fr 1.8fr;
   gap: 1rem;
   width: 70%;
 }
 
+.background-pattern {
+  padding: 0.5rem;
+  position: absolute;
+  width: 3rem;
+  border-radius: 0.5rem;
+  background-color: white;
+  z-index: -1;
+}
+
+#background-pattern-1 {
+  top: 25%;
+  left: 5%;
+}
+
+#background-pattern-2 {
+  top: 40%;
+  left: 13%;
+  rotate: 340deg;
+}
+
+#background-pattern-3 {
+  top: 63%;
+  left: 7%;
+  rotate: 20deg;
+}
+
+#background-pattern-4 {
+  top: 25%;
+  right: 10%;
+}
+
+#background-pattern-5 {
+  top: 36%;
+  right: 19%;
+  rotate: 340deg;
+}
+
+#background-pattern-6 {
+  top: 53%;
+  right: 11%;
+  rotate: 20deg;
+}
+
+@media (max-width: 568px) {
+  #feature-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
