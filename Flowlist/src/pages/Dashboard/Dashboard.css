@@ -89,6 +89,10 @@
   cursor: pointer;
 }
 
+#view-schedule-btn:hover {
+  background-color: #5b6efe;
+}
+
 /*Stats*/
 #stats-container {
   display: flex;

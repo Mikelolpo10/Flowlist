@@ -24,3 +24,7 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.upcoming-container-head a:hover {
+  color: #6e7aeb;
+}
