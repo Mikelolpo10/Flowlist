@@ -1,4 +1,6 @@
 import { motion } from 'motion/react'
+import logoAddUser from '@assets/logo/logo-add-user.png'
+import logoProfile from '@assets/logo/sidebar/logo-profile.png'
 import './Schedule.css'
 
 export default function Schedule({ pageVariant, userData }) {
@@ -15,9 +17,12 @@ export default function Schedule({ pageVariant, userData }) {
           exit='exit'
           transition={{ duration: 0.3 }}
         >
-          <div id="schedule">
-
-          </div>
+          <header id='header-container'>
+            <h1>Mutiara team</h1>
+            <div id='team-members-container'>
+              <img src={logoAddUser}/> 
+            </div>
+          </header>
         </main>
       </div>
     </>

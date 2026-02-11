@@ -57,6 +57,27 @@ function App() {
               pageVariant={pageVariant}
             />}
           />
+          <Route
+            path='/schedule'
+            element={<Schedule
+              userData={userData}
+              pageVariant={pageVariant}
+            />}
+          />
+          <Route
+            path='/schedule'
+            element={<Schedule
+              userData={userData}
+              pageVariant={pageVariant}
+            />}
+          />
+          <Route
+            path='/schedule'
+            element={<Schedule
+              userData={userData}
+              pageVariant={pageVariant}
+            />}
+          />
         </Route>
       </Routes>
     </AnimatePresence>

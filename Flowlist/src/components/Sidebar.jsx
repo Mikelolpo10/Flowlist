@@ -15,9 +15,9 @@ export default function Sidebar({ userData }) {
     { to: '/dashboard', icon: logoDashboard, label: 'Dashboard' },
     { to: '/schedule', icon: logoSchedule, label: 'Schedule' },
     { to: '/teams', icon: logoTeams, label: 'Teams' },
+    { to: '/chat', icon: logoChat, label: 'Chat' },
     { to: '/connect', icon: logoConnect, label: 'Connect' },
     { to: '/settings', icon: logoSettings, label: 'Settings' },
-    { to: '/chat', icon: logoChat, label: 'Chat' },
   ]
 
   return (
