@@ -1,4 +1,4 @@
-import { motion, scale } from 'motion/react'
+import { easeInOut, motion, scale } from 'motion/react'
 import { useEffect, useState } from 'react'
 import Button from '@components/Button.jsx'
 import FeatureCard from './FeatureCard.jsx'
@@ -11,15 +11,26 @@ import logoPattern6 from '@assets/misc/logo-pattern-6.png'
 import './Homepage.css'
 
 export default function Homepage({ pageVariant, userData }) {
-  const [patternAnimate, setPatternAnimate] = useState(false)
+  const [patternPhase, setPatternPhase] = useState('hidden')
   const patternVariants = {
-    hidden: { opacity: '0', scale: '0' },
-    popOut: { opacity: '1', scale: '1', transition: { 
-      type: 'spring', damping: '15' 
-    }},
+    hidden: { opacity: 0, scale: 0 },
+    popOut: {
+      opacity: 1, scale: 1, transition: {
+        type: 'spring',
+        damping: 15,
+        stiffness: 500,
+        duration: 0.5,
+        ease: 'easeInOut'
+      }
+    },
     animate: {
       y: [0, -15, 0],
       x: [0, 10, 0],
+      transition:{
+        duration: 5,
+        repeat: Infinity,
+        ease: 'easeInOut',
+      }
     }
   }
   const logoPatterns = [
@@ -31,13 +42,7 @@ export default function Homepage({ pageVariant, userData }) {
     logoPattern6
   ]
 
-  // useEffect(() => {
-  //   if (patternAnimate) {
-
-  //   }
-  // }, [patternAnimate])
-
-  return ( // Aku mau animasi background pattern muncul kayak pop gitu setelah page utama selesai slide terus baru gerak gerak sendiri
+  return ( 
     <>
       <title>Homepage</title>
 
@@ -48,7 +53,7 @@ export default function Homepage({ pageVariant, userData }) {
         animate='animate'
         exit='exit'
         transition={{ duration: 0.3 }}
-        onAnimationComplete={() => setPatternAnimate(true)}
+        onAnimationComplete={() => setPatternPhase('popOut')}
       >
         <div id="primary-top-container">
           <h1>A better way to organize your schedule<br /> powered by Flowlists</h1>
@@ -79,15 +84,9 @@ export default function Homepage({ pageVariant, userData }) {
             id={`background-pattern-${index + 1}`}
             src={logo}
             className="background-pattern"
-            animate={{
-              y: [0, -15, 0],
-              x: [0, 10, 0],
-            }}
-            transition={{
-              duration: 5 + index,
-              repeat: Infinity,
-              ease: 'easeInOut',
-            }}
+            variants={patternVariants}
+            animate={patternPhase}
+            onAnimationComplete={() => setPatternPhase('animate')}
           />
         ))}
       </motion.main>
