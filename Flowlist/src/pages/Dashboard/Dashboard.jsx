@@ -44,15 +44,15 @@ export default function Dashboard({ pageVariant, userData }) {
     <>
       <title>Dashboard</title>
 
-      <div className="root-container">
-        <motion.main
-          id="dashboard-container"
-          variants={pageVariant}
-          initial='initial'
-          animate='animate'
-          exit='exit'
-          transition={{ duration: 0.3 }}
-        >
+      <motion.div className="root-container"
+        id="dashboard-container"
+        variants={pageVariant}
+        initial='initial'
+        animate='animate'
+        exit='exit'
+        transition={{ duration: 0.3 }}
+      >
+        <main>
           <div id="main-top-container">
             <section id="greetings-container">
               <h2>Hello, Username.</h2>
@@ -134,8 +134,8 @@ export default function Dashboard({ pageVariant, userData }) {
               data={meetingList}
             />
           </div>
-        </motion.main>
-      </div>
+        </main>
+      </motion.div>
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import logoAddUser from '@assets/logo/logo-add-user.png'
-import logoProfile from '@assets/logo/sidebar/logo-profile.png'
+import logoMember from '@assets/logo/sidebar/logo-profile.png'
 import './Schedule.css'
 
 export default function Schedule({ pageVariant, userData }) {
@@ -20,6 +20,9 @@ export default function Schedule({ pageVariant, userData }) {
           <header id='header-container'>
             <h1>Mutiara team</h1>
             <div id='team-members-container'>
+              <img id='add-team-member' src={logoMember}/> 
+              <img src={logoMember}/> 
+              <img src={logoMember}/> 
               <img src={logoAddUser}/> 
             </div>
           </header>

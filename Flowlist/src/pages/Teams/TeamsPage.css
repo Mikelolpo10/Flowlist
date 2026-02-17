@@ -1,0 +1,57 @@
+#teams-container {
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  width: 100%;
+}
+
+#header-left h1 {
+  font-size: 1.5rem;
+}
+
+#header-left small {
+  display: flex;
+  color: #686868;
+  transform: translateY(-5%);
+}
+
+#header-right {
+  margin-left: auto;
+  display: flex;
+  height: 2rem;
+}
+
+#search-bar {
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  width: 13rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(30,40,100,0.06);
+  transition: border-color 0.2s;
+}
+
+#search-bar input::placeholder {
+  color: rgb(130, 141, 143);
+  font-size: 14px;
+  font-weight: 500;
+  transform: translateY(10%);
+}
+
+#search-bar svg {
+  margin: 0 0.5rem;
+  display: flex;
+  height: 1rem;
+  width: 1rem;
+}
+
+#search-bar input {
+  border: none;
+}
+

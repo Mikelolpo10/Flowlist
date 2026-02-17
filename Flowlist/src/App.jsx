@@ -5,6 +5,7 @@ import MainLayout from '@components/MainLayout.jsx'
 import Homepage from './pages/Homepage/Homepage.jsx'
 import Dashboard from './pages/Dashboard/Dashboard.jsx'
 import Schedule from './pages/Schedule/Schedule.jsx'
+import TeamsPage from './pages/Teams/TeamsPage.jsx'
 import './App.css'
 
 function App() {
@@ -58,8 +59,8 @@ function App() {
             />}
           />
           <Route
-            path='/schedule'
-            element={<Schedule
+            path='/teams'
+            element={<TeamsPage
               userData={userData}
               pageVariant={pageVariant}
             />}
