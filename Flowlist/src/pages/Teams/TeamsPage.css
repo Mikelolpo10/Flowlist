@@ -38,8 +38,8 @@ header {
   border: solid 1px white;
   border-radius: 0.5rem;
   background-color: white;
-  box-shadow: 0 1px 4px rgba(30,40,100,0.06);
-  transition: border-color 0.2s;
+  box-shadow: var(--box-shadow);
+  transition: border-color 0.7s;
 }
 
 .search-bar input {
@@ -64,10 +64,10 @@ header {
 
 .search-bar-focus {
   border: solid 1px var(--primary-blue-color);
-  transition: all 0.7s;
+  transition: all 0.5s;
 }
 
-#search-button {
+#new-team-button {
   padding: 0.5rem 1.2rem;
   border: none;
   border-radius: 0.5rem;

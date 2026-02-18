@@ -3,10 +3,12 @@ import { useState } from 'react'
 import './TeamsPage.css'
 
 export default function TeamsPage({ pageVariant, userData }) {
-  const [ searchBarFocus, setSearchBarFocus ] = useState('')
+  const [ isSearchFocus, setIsSearchFocus ] = useState(false)
 
   return (
     <>
+      <title>Teams</title>
+
       <motion.div className='root-container'
         variants={pageVariant}
         initial='initial'
@@ -20,20 +22,32 @@ export default function TeamsPage({ pageVariant, userData }) {
             <small>Manage and collaborate across all your teams</small>
           </div>
           <div id='header-right'>
-            <div className={`search-bar ${searchBarFocus}`}>
-              <svg viewBox="0 0 24 24" fill="none" stroke="#686868" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+            <div className={`search-bar ${isSearchFocus ? 'search-bar-focus' : ''}`}>
+              <svg 
+                viewBox="0 0 24 24" 
+                fill="none" 
+                stroke="#686868" 
+                strokeWidth="2" 
+                strokeLinecap="round" 
+                strokeLinejoin="round"
+              >
+                <circle cx="11" cy="11" r="8"/>
+                <path d="m21 21-4.35-4.35"/>
+              </svg>
               <input 
                 placeholder="Search teams..." 
-                onFocus={() => setSearchBarFocus('search-bar-focus')} 
-                onBlur={() => setSearchBarFocus('')}
+                onFocus={() => setIsSearchFocus(true)} 
+                onBlur={() => setIsSearchFocus(false)}
               />
             </div>
-            <button id='search-button'>+ New Team</button>
+            <button id='new-team-button'>+ New Team</button>
           </div>
         </header>
 
         <main id='teams-container'>
-          <div></div>
+          <div id='team-choice-container'>
+            
+          </div>
         </main>
 
       </motion.div>
