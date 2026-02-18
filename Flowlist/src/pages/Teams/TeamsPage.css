@@ -35,8 +35,7 @@ header {
   display: flex;
   align-items: center;
   width: 13rem;
-  /* border: none; */
-  border: solid 1px var(--primary-blue-color);
+  border: solid 1px white;
   border-radius: 0.5rem;
   background-color: white;
   box-shadow: 0 1px 4px rgba(30,40,100,0.06);
@@ -65,7 +64,7 @@ header {
 
 .search-bar-focus {
   border: solid 1px var(--primary-blue-color);
-  transition: all 1s;
+  transition: all 0.7s;
 }
 
 #search-button {
