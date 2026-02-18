@@ -22,6 +22,7 @@ header {
 #header-right {
   margin-left: auto;
   display: flex;
+  gap: 0.8rem;
   height: 2rem;
 }
 
@@ -29,33 +30,51 @@ header {
   box-shadow: var(--box-shadow);
 }
 
-#search-bar {
+.search-bar {
   padding: 0.35rem;
   display: flex;
   align-items: center;
   width: 13rem;
-  border: none;
+  /* border: none; */
+  border: solid 1px var(--primary-blue-color);
   border-radius: 0.5rem;
   background-color: white;
   box-shadow: 0 1px 4px rgba(30,40,100,0.06);
   transition: border-color 0.2s;
 }
 
-#search-bar input::placeholder {
+.search-bar input {
+  padding-right: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.search-bar input::placeholder {
   color: rgb(130, 141, 143);
   font-size: 14px;
   font-weight: 500;
   transform: translateY(10%);
 }
 
-#search-bar svg {
+.search-bar svg {
   margin: 0 0.5rem;
   display: flex;
   height: 1rem;
   width: 1rem;
 }
 
-#search-bar input {
+.search-bar-focus {
+  border: solid 1px var(--primary-blue-color);
+  transition: all 1s;
+}
+
+#search-button {
+  padding: 0.5rem 1.2rem;
   border: none;
+  border-radius: 0.5rem;
+  background-color: var(--primary-blue-color);
+  color: white;
+  font-size: 14px;
+  box-shadow: var(--box-shadow);
 }
 
