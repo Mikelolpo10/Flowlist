@@ -1,5 +1,5 @@
 import { easeInOut, motion, scale } from 'motion/react'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import Button from '@components/Button.jsx'
 import FeatureCard from './FeatureCard.jsx'
 import logoPattern1 from '@assets/misc/logo-pattern-1.png'

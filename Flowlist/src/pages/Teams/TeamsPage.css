@@ -25,6 +25,10 @@ header {
   height: 2rem;
 }
 
+#header-right > * {
+  box-shadow: var(--box-shadow);
+}
+
 #search-bar {
   padding: 0.35rem;
   display: flex;

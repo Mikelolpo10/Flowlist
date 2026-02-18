@@ -1,8 +1,11 @@
 :root {
   font-family: "poppins", sans-serif;
 
-  background: #EEFDFF;
+  background: #eef2fb;
+  /* #EEFDFF */
 
+  --font-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 15%);
+  
   overflow-x: hidden;
 
   font-synthesis: none;
@@ -37,3 +40,4 @@
   padding: 0;
   box-sizing: border-box;
 }
+
